@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e5">
+  <meta name="description" content="Butter Boys Chicken. Coming soon.">
+  <title>Butter Boys Chicken | Coming Soon</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f7f1e5;
+      --tomato: #ed5038;
+      --ink: #24221d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background-color: var(--background);
+      font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+    }
+
+    .page {
+      position: relative;
+      display: flex;
+      min-height: 100svh;
+      flex-direction: column;
+      padding: clamp(22px, 4vw, 54px) clamp(20px, 6vw, 88px) 24px;
+      overflow: hidden;
+    }
+
+    .topline {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: auto;
+      height: clamp(92px, 10vw, 132px);
+      mix-blend-mode: darken;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
+      mask-composite: intersect;
+    }
+
+    main {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: clamp(80px, 14.5vw, 220px);
+      font-weight: 900;
+      line-height: .76;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--tomato);
+      -webkit-text-stroke: 1px var(--ink);
+    }
+
+    .contact {
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      bottom: 24px;
+      left: 20px;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration-color: var(--tomato);
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 720px) {
+      h1 { font-size: clamp(76px, 20vw, 140px); }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main > * { animation: arrive .65s cubic-bezier(.2,.75,.25,1) both; }
+      @keyframes arrive {
+        from { opacity: 0; transform: translateY(14px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topline" aria-label="Butter Boys Chicken">
+      <img class="brand-logo" src="460b9f93-d257-49bd-94d4-f40cbeacf4ab.JPG" alt="Butter Boys Chicken logo">
+    </header>
+
+    <main>
+      <h1>Coming<span>Soon</span></h1>
+    </main>
+
+    <footer class="contact"><a href="mailto:info@butterboyschicken.com">info@butterboyschicken.com</a></footer>
+  </div>
+</body>
+</html>

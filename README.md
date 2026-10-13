@@ -11,9 +11,11 @@ The existing homepage remains unchanged; the shop is available directly at `/sho
 
 ## Square checkout
 
-Retail checkout is disabled until an active Square payment link is configured in `shop/square-config.js`. Set up the product, shipping, tax, inventory, order notifications and legal policies in Square before taking orders. Never place private Square credentials in the static site. Customers must confirm quantity and delivery on Square's hosted checkout.
+Retail checkout uses a Netlify Function to create a Square-hosted checkout session for the selected quantity. It remains disabled until `shop/square-config.js` enables it and the Square credentials, location ID and item variation ID are set as Netlify environment variables. Never put private Square credentials in the static site. Configure shipping, tax, inventory, order notifications and legal policies in Square before taking orders.
 
 Orders of 1,000 kits or more are routed to the Butter Boys wholesale email. Confirm final approved product ingredients, allergens, nutrition and handling information before opening sales.
+
+See `shop/README.md` for Square account setup, required Netlify environment variables and checkout activation steps.
 
 ## Product imagery
 

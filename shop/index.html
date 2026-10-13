@@ -798,19 +798,8 @@
         });
 
         const configured = window.BUTTER_BOYS_SHOP_CONFIG || {};
-        const paymentLinkUrl = String(configured.paymentLinkUrl || "").trim();
-        let checkoutReady = false;
-        try {
-          const paymentLink = new URL(paymentLinkUrl);
-          checkoutReady =
-            paymentLink.protocol === "https:" &&
-            ["square.link", "checkout.square.site"].includes(
-              paymentLink.hostname,
-            ) &&
-            paymentLink.pathname.length > 1;
-        } catch {
-          checkoutReady = false;
-        }
+        const checkoutEnabled = configured.checkoutEnabled === true;
+        let isCheckingOut = false;
 
         function setQuantity(value) {
           const parsed = Number.parseInt(value, 10);
@@ -848,11 +837,10 @@
           orderAction.classList.remove("wholesale-action");
           wholesaleNote.textContent =
             "Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.";
-          if (checkoutReady) {
+          if (checkoutEnabled) {
             status.textContent =
-              "Continue to Square’s secure checkout and confirm your quantity and delivery before paying.";
+              "Continue to Square’s secure checkout to enter delivery details and pay.";
             orderAction.textContent = "Continue to Square checkout";
-            orderAction.href = paymentLinkUrl;
             orderAction.removeAttribute("aria-disabled");
           } else {
             status.textContent =
@@ -882,14 +870,60 @@
         });
 
         orderAction.addEventListener("click", (event) => {
-          if (
-            Number(quantityInput.value) < wholesaleThreshold &&
-            !checkoutReady
-          ) {
-            event.preventDefault();
+          if (Number(quantityInput.value) >= wholesaleThreshold) {
+            return;
+          }
+
+          event.preventDefault();
+          if (!checkoutEnabled) {
             status.textContent =
               "Retail checkout is not available yet. Please check back soon.";
+            return;
           }
+
+          if (isCheckingOut) {
+            return;
+          }
+
+          isCheckingOut = true;
+          orderAction.setAttribute("aria-disabled", "true");
+          orderAction.textContent = "Preparing secure checkout…";
+          status.textContent = "Connecting to Square’s secure checkout…";
+
+          fetch("/.netlify/functions/create-square-checkout", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ quantity: Number(quantityInput.value) }),
+          })
+            .then(async (response) => {
+              const result = await response.json();
+              if (!response.ok) {
+                throw new Error(
+                  result.error || "Square checkout could not be created.",
+                );
+              }
+
+              const checkoutUrl = new URL(result.checkoutUrl);
+              if (
+                checkoutUrl.protocol !== "https:" ||
+                !["square.link", "checkout.square.site"].includes(
+                  checkoutUrl.hostname,
+                )
+              ) {
+                throw new Error("Square returned an invalid checkout link.");
+              }
+
+              status.textContent = "Redirecting to Square’s secure checkout…";
+              window.location.assign(checkoutUrl.href);
+            })
+            .catch((error) => {
+              console.error("Unable to start Square checkout.", error);
+              status.textContent =
+                "We couldn’t start checkout just now. Please try again shortly.";
+              orderAction.textContent = "Try Square checkout again";
+              orderAction.removeAttribute("aria-disabled");
+              isCheckingOut = false;
+            });
         });
 
         setQuantity(quantityInput.value);

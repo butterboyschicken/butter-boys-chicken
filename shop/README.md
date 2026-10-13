@@ -13,17 +13,19 @@ This is the standalone, dependency-free Butter Boys Chicken product shop page. I
 
 ## Connect Square checkout
 
-Checkout is deliberately disabled until a real Square checkout link is configured. In Square, create an active payment link for the Butter Boys Chicken Kit at £7.99 per kit, set up shipping, tax, order notifications and fulfilment, then copy its secure checkout URL into `square-config.js`:
+Checkout is created server-side by the Netlify Function in `../netlify/functions/create-square-checkout.mjs`. Square account credentials are never sent to the browser. The function accepts retail quantities from 1 to 999, confirms the configured Square catalogue variation is priced at £7.99, and creates a Square-hosted checkout asking for the shipping address.
 
-```js
-window.BUTTER_BOYS_SHOP_CONFIG = {
-  paymentLinkUrl: "https://square.link/u/your-checkout-link",
-};
-```
+1. Create a Square account and complete Square's business verification.
+2. Add the Butter Boys Chicken Kit in the Square Dashboard at £7.99, set up inventory and shipping/fulfilment, and note the item's variation ID and the relevant location ID.
+3. Decide the delivery charge first. The current integration applies one fixed delivery fee to each order; set `SQUARE_SHIPPING_FEE_PENCE` to that fee in pence (for example, `350` for £3.50, or `0` only if delivery is intentionally free). If delivery charges need to vary by destination, do not enable checkout until that policy has been implemented and tested.
+4. In the Netlify site's environment-variable settings, set `SQUARE_ACCESS_TOKEN`, `SQUARE_LOCATION_ID`, `SQUARE_ITEM_VARIATION_ID`, `SQUARE_ENVIRONMENT`, and `SQUARE_SHIPPING_FEE_PENCE`. Use a sandbox token with `SQUARE_ENVIRONMENT=sandbox` for testing; use a production token and `SQUARE_ENVIRONMENT=production` only when ready to accept real payments.
+5. Keep `SQUARE_ACCESS_TOKEN` only in Netlify's encrypted environment-variable settings. Never put it in this repository, `square-config.js`, browser code, or a public message.
+6. After the production function is configured and tested, change `checkoutEnabled` to `true` in `square-config.js` and deploy the site. Retail checkout remains disabled by default.
+7. Test an order end-to-end, including the selected quantity, shipping address and fee, tax, payment methods, Square order notifications and payout to the Tide account. Confirm Square shows the correct amount and settings before enabling live checkout.
 
-Only an HTTPS link hosted by `square.link` or `checkout.square.site` enables the retail checkout button. The link is public; never put a Square access token, application secret or other private credential in this static site.
+Netlify Functions run from the repository root under `netlify/functions/`; no dependencies or build command are required. Set environment variables for the Functions runtime and redeploy after changing them. The client routes quantities of 1,000 or more to wholesale contact, and the function independently rejects those quantities.
 
-The quantity selector on this page displays an estimated item subtotal; it cannot set the quantity in a static Square payment link. Customers must confirm the item quantity and delivery in Square checkout. Test the live link, payment methods (including Apple Pay and cards), shipping, tax and order notifications before enabling checkout or taking orders. If the Square link allows customers to change quantity, configure a 999-kit maximum if Square offers that setting so orders of 1,000 kits or more continue to be handled through the wholesale contact flow. The pack image is explicitly labelled as a packaging preview.
+The pack image is explicitly labelled as a packaging preview.
 
 The web recipe follows the owner-supplied blend quantities and method. The three preparation cards show the method and pack totals; the full ingredient-name list is in the Ingredients & allergens section without individual component weights. Before printing or publishing final pack instructions, professionally validate the recipe and frying guidance, the required food-safety checks, allergen declaration and final net weight. The supplied blend weights (18 g + 138 g + 45 g) add up to 201 g while the stated retail net weight is 200 g. The listed component gram amounts also total 17.3 g for the 18 g marinade blend, 134.6 g for the 138 g dry mix, and 44 g for the 45 g wet dredge; confirm whether these differences are rounding, omitted ingredients or require a correction. Confirm allergens against the final recipe and supplier specifications before sale.
 
@@ -31,4 +33,4 @@ The web recipe follows the owner-supplied blend quantities and method. The three
 
 In the Butter Boys production repository, keep these files in the `shop/` directory so the shop is available at `https://butterboyschicken.com/shop/`. The existing root `index.html` stays unchanged and no homepage link is added. The root `index.html` and the existing root logo image must stay in place.
 
-This shop page is built into the Netlify-connected GitHub repository. Once Square is configured, add the real payment link to `square-config.js` to enable checkout. Do not change DNS or email records as part of this page deployment.
+This shop page is built into the Netlify-connected GitHub repository. Do not change DNS or email records as part of payment setup.

@@ -1,6 +1,6 @@
 # Butter Boys Chicken shop
 
-This is the standalone, dependency-free Butter Boys Chicken product shop page. It is separate from Tiny Bean Company's `index.html` and includes the logo and supplied packaging mockup in its assets.
+This is the standalone, dependency-free Butter Boys Chicken product shop page. It is separate from Tiny Bean Company's `index.html` and includes the exact homepage logo image and supplied packaging mockup in its assets.
 
 ## Product details shown
 

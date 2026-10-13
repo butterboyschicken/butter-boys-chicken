@@ -594,7 +594,7 @@
         }
       }
     </style>
-    <script src="shopify-config.js"></script>
+    <script src="square-config.js"></script>
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -645,12 +645,12 @@
               >
               <button class="quantity-control" id="increase" type="button" aria-label="Increase quantity">+</button>
               <div class="subtotal" aria-live="polite">
-                Subtotal
+                Estimated subtotal
                 <strong id="subtotal">£7.99</strong>
               </div>
             </div>
             <p class="checkout-status" id="quantity-help" aria-live="polite">
-              Secure Shopify checkout is not connected yet.
+              Secure Square checkout is not connected yet.
             </p>
             <a
               class="action"
@@ -658,7 +658,7 @@
               href="#"
               aria-disabled="true"
               aria-describedby="quantity-help"
-            >Shopify checkout coming soon</a>
+            >Square checkout coming soon</a>
             <p class="wholesale-note" id="wholesale-note">
               Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.
             </p>
@@ -798,16 +798,19 @@
         });
 
         const configured = window.BUTTER_BOYS_SHOP_CONFIG || {};
-        const storeDomain = String(configured.storeDomain || "")
-          .trim()
-          .toLowerCase();
-        const variantId = String(configured.productVariantId || "").trim();
-        const validDomain =
-          /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}$/.test(
-            storeDomain,
-          );
-        const validVariantId = /^\d+$/.test(variantId);
-        const checkoutReady = validDomain && validVariantId;
+        const paymentLinkUrl = String(configured.paymentLinkUrl || "").trim();
+        let checkoutReady = false;
+        try {
+          const paymentLink = new URL(paymentLinkUrl);
+          checkoutReady =
+            paymentLink.protocol === "https:" &&
+            ["square.link", "checkout.square.site"].includes(
+              paymentLink.hostname,
+            ) &&
+            paymentLink.pathname.length > 1;
+        } catch {
+          checkoutReady = false;
+        }
 
         function setQuantity(value) {
           const parsed = Number.parseInt(value, 10);
@@ -846,15 +849,15 @@
           wholesaleNote.textContent =
             "Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.";
           if (checkoutReady) {
-            status.textContent = "You’ll continue to secure Shopify checkout.";
-            orderAction.textContent = "Continue to Shopify checkout";
-            orderAction.href =
-              `https://${storeDomain}/cart/${variantId}:${quantity}`;
+            status.textContent =
+              "Continue to Square’s secure checkout and confirm your quantity and delivery before paying.";
+            orderAction.textContent = "Continue to Square checkout";
+            orderAction.href = paymentLinkUrl;
             orderAction.removeAttribute("aria-disabled");
           } else {
             status.textContent =
-              "Secure Shopify checkout is not connected yet.";
-            orderAction.textContent = "Shopify checkout coming soon";
+              "Secure Square checkout is not connected yet.";
+            orderAction.textContent = "Square checkout coming soon";
             orderAction.href = "#";
             orderAction.setAttribute("aria-disabled", "true");
           }

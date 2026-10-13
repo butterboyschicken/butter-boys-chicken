@@ -9,9 +9,9 @@ A lightweight, static site for the Butter Boys Chicken three-pouch spice kit. No
 
 The existing homepage remains unchanged; the shop is available directly at `/shop/`.
 
-## Shopify checkout
+## Square checkout
 
-Retail checkout is disabled until the live product variant and Shopify domain are configured in `shop/shopify-config.js`. Set up the product, shipping, tax, inventory, order notifications and legal policies in Shopify before taking orders. Never place private Shopify credentials in the static site.
+Retail checkout is disabled until an active Square payment link is configured in `shop/square-config.js`. Set up the product, shipping, tax, inventory, order notifications and legal policies in Square before taking orders. Never place private Square credentials in the static site. Customers must confirm quantity and delivery on Square's hosted checkout.
 
 Orders of 1,000 kits or more are routed to the Butter Boys wholesale email. Confirm final approved product ingredients, allergens, nutrition and handling information before opening sales.
 

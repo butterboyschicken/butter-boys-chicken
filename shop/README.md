@@ -9,6 +9,7 @@ This is the standalone, dependency-free Butter Boys Chicken product shop page. I
 - Makes enough chicken for 6 people
 - £7.99 per retail kit
 - Orders of 1,000 kits or more switch to the wholesale contact action
+- Serving suggestion: enjoy with pickles; the pickle partner brand is still to be chosen
 
 ## Connect Shopify checkout
 

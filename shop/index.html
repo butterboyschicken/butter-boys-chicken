@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f2e7">
+    <meta
+      name="description"
+      content="Three-step fried chicken made easy. Shop the Butter Boys Chicken Kit — a 200g pack that makes chicken for six."
+    >
+    <meta property="og:title" content="Shop Butter Boys Chicken">
+    <meta
+      property="og:description"
+      content="Three blends. One proper crunch. Get the 200g Butter Boys Chicken Kit for £7.99."
+    >
+    <meta property="og:type" content="product">
+    <title>Shop Butter Boys Chicken | Three steps. Serious crunch.</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f7f2e7;
+        --card: #fffdf8;
+        --ink: #18231f;
+        --green: #153c36;
+        --red: #eb2926;
+        --yellow: #f2b900;
+        --muted: #626d65;
+        --line: #ddd5c5;
+        --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+        --display: Impact, "Arial Narrow", "Arial Black", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.55;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(1180px, calc(100% - 3rem));
+        margin-inline: auto;
+      }
+
+      .top-note {
+        padding: 0.5rem 1rem;
+        background: var(--green);
+        color: #fffdf8;
+        font-size: 0.77rem;
+        letter-spacing: 0.08em;
+        text-align: center;
+      }
+
+      .header {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        min-height: 84px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+
+      .logo {
+        width: 64px;
+        height: 76px;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .nav-link {
+        color: var(--green);
+        font-size: 0.86rem;
+        font-weight: 750;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.24em;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: clamp(2.5rem, 6vw, 6rem);
+        padding-block: clamp(3rem, 7vw, 6.5rem);
+      }
+
+      .product-image {
+        overflow: hidden;
+        border: 1px solid #e2d8c5;
+        border-radius: 4px;
+        background: #e9e3d8;
+      }
+
+      .product-image img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+      }
+
+      .image-caption {
+        margin: 0;
+        padding: 0.65rem 0.85rem;
+        background: var(--card);
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 0.9rem;
+        color: var(--red);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 1.25rem;
+        height: 2px;
+        background: currentColor;
+        content: "";
+      }
+
+      .eyebrow-light {
+        color: var(--yellow);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--green);
+      }
+
+      h1 {
+        max-width: 10ch;
+        margin-bottom: 1rem;
+        font-family: var(--display);
+        font-size: clamp(3.5rem, 8vw, 6.8rem);
+        font-weight: 900;
+        letter-spacing: -0.035em;
+        line-height: 0.87;
+        text-transform: uppercase;
+      }
+
+      .intro {
+        max-width: 37rem;
+        margin-bottom: 1.4rem;
+        color: #4e5b53;
+        font-size: clamp(1rem, 1.6vw, 1.13rem);
+      }
+
+      .price {
+        display: flex;
+        align-items: baseline;
+        gap: 0.55rem;
+        margin-bottom: 1.5rem;
+        color: var(--green);
+      }
+
+      .price strong {
+        font-size: 2.45rem;
+        letter-spacing: -0.055em;
+        line-height: 1;
+      }
+
+      .price span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .purchase-card {
+        max-width: 31rem;
+        padding: 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: var(--card);
+        box-shadow: 0 16px 40px rgb(49 46 35 / 5%);
+      }
+
+      .quantity-label {
+        display: block;
+        margin-bottom: 0.4rem;
+        color: var(--green);
+        font-size: 0.8rem;
+        font-weight: 750;
+      }
+
+      .quantity-row {
+        display: grid;
+        grid-template-columns: 2.8rem minmax(0, 5rem) 2.8rem 1fr;
+        align-items: center;
+        gap: 0.55rem;
+      }
+
+      .quantity-control,
+      .quantity-input {
+        height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        background: #fff;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .quantity-control {
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+
+      .quantity-control:hover {
+        border-color: var(--green);
+      }
+
+      .quantity-input {
+        width: 100%;
+        padding-inline: 0.5rem;
+        text-align: center;
+      }
+
+      .subtotal {
+        min-width: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-align: right;
+      }
+
+      .subtotal strong {
+        display: block;
+        color: var(--green);
+        font-size: 1.04rem;
+      }
+
+      .action {
+        display: flex;
+        min-height: 50px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        border: 1px solid var(--green);
+        border-radius: 3px;
+        padding: 0.75rem 1rem;
+        background: var(--green);
+        color: #fff;
+        font: inherit;
+        font-weight: 750;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 150ms ease;
+      }
+
+      .action:not(:disabled):hover {
+        background: #0b2e28;
+      }
+
+      .action:disabled {
+        cursor: not-allowed;
+        opacity: 0.67;
+      }
+
+      .wholesale-action {
+        border-color: var(--red);
+        background: var(--red);
+      }
+
+      .wholesale-action:not(:disabled):hover {
+        background: #c7211f;
+      }
+
+      .checkout-status {
+        min-height: 1.35rem;
+        margin: 0.75rem 0 0;
+        color: var(--muted);
+        font-size: 0.76rem;
+      }
+
+      .shop-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.05rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .shop-meta li {
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        padding: 0.34rem 0.68rem;
+        color: var(--green);
+        font-size: 0.76rem;
+        font-weight: 650;
+      }
+
+      .wholesale-note {
+        margin: 0.85rem 0 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .how {
+        padding-block: clamp(3.5rem, 7vw, 5rem);
+        background: var(--green);
+        color: var(--paper);
+      }
+
+      .how h2 {
+        max-width: 14ch;
+        margin-bottom: 2rem;
+        color: var(--paper);
+        font-family: var(--display);
+        font-size: clamp(2.7rem, 5.6vw, 4.8rem);
+        letter-spacing: -0.025em;
+        line-height: 0.96;
+        text-transform: uppercase;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .step {
+        min-height: 152px;
+        padding: 1.2rem 1.35rem;
+        border: 1px solid rgb(255 255 255 / 28%);
+      }
+
+      .step span {
+        display: block;
+        margin-bottom: 1rem;
+        color: var(--yellow);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .step h3 {
+        margin-bottom: 0.35rem;
+        color: #fff;
+        font-family: var(--display);
+        font-size: 1.65rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .step p {
+        margin-bottom: 0;
+        color: #e4e9dc;
+        font-size: 0.86rem;
+      }
+
+      .details {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: clamp(2rem, 7vw, 6rem);
+        padding-block: clamp(3.5rem, 7vw, 6rem);
+      }
+
+      .details h2 {
+        margin-bottom: 0.8rem;
+        font-family: var(--display);
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        letter-spacing: -0.02em;
+        line-height: 0.98;
+        text-transform: uppercase;
+      }
+
+      .details p,
+      .wholesale-copy {
+        color: var(--muted);
+      }
+
+      .wholesale-copy {
+        max-width: 42rem;
+        color: #e4e9dc;
+      }
+
+      .facts {
+        margin: 0;
+      }
+
+      .fact {
+        display: grid;
+        grid-template-columns: minmax(8rem, 0.65fr) 1fr;
+        gap: 1rem;
+        padding-block: 1rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .fact:first-child {
+        border-top: 1px solid var(--line);
+      }
+
+      .fact dt {
+        color: var(--green);
+        font-weight: 750;
+      }
+
+      .fact dd {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .footer {
+        padding-block: 2rem;
+        background: #eee8d9;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem 2rem;
+      }
+
+      .footer p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .footer a {
+        color: var(--green);
+        font-size: 0.83rem;
+        font-weight: 700;
+        text-underline-offset: 0.2em;
+      }
+
+      :focus-visible {
+        outline: 3px solid #b77a00;
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 800px) {
+        .wrap {
+          width: min(100% - 2rem, 640px);
+        }
+
+        .hero,
+        .details {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          gap: 2rem;
+        }
+
+        .product-image {
+          order: 1;
+        }
+
+        .hero-copy {
+          order: 0;
+        }
+
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .step {
+          min-height: initial;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .quantity-row {
+          grid-template-columns: 2.55rem minmax(0, 4.5rem) 2.55rem;
+        }
+
+        .subtotal {
+          grid-column: 1 / -1;
+          padding-top: 0.5rem;
+          text-align: left;
+        }
+
+        .subtotal strong {
+          display: inline;
+          margin-left: 0.3rem;
+        }
+
+        .fact {
+          grid-template-columns: 1fr;
+          gap: 0.25rem;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+    <script src="shopify-config.js"></script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <div class="top-note">THREE STEPS. SERIOUS CRUNCH.</div>
+    <header class="header">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a href="#top" aria-label="Butter Boys Chicken shop home">
+          <img class="logo" src="assets/butter-boys-chicken-logo.svg" alt="Butter Boys Chicken">
+        </a>
+        <a class="nav-link" href="#wholesale">Buying for your business? Wholesale info</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap" aria-labelledby="product-title">
+        <figure class="product-image">
+          <img
+            src="assets/butter-boys-packaging-preview.jpg"
+            alt="Butter Boys Chicken three-step spice mix kit packaging mockup, showing the three sachets inside"
+            width="1152"
+            height="768"
+          >
+          <figcaption class="image-caption">Packaging preview. Final pack artwork and food information will be confirmed before sale.</figcaption>
+        </figure>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Fried chicken, made easy</p>
+          <h1 id="product-title">Three steps. Serious crunch.</h1>
+          <p class="intro">Meet the Butter Boys Chicken Kit: three blends to help bring proper, crispy fried chicken to your table at home.</p>
+          <p class="price"><strong>£7.99</strong><span>per 200 g kit</span></p>
+
+          <section class="purchase-card" aria-label="Order Butter Boys Chicken Kit">
+            <label class="quantity-label" for="quantity">How many kits?</label>
+            <div class="quantity-row">
+              <button class="quantity-control" id="decrease" type="button" aria-label="Decrease quantity">−</button>
+              <input
+                class="quantity-input"
+                id="quantity"
+                type="number"
+                min="1"
+                max="100000"
+                step="1"
+                value="1"
+                inputmode="numeric"
+                aria-describedby="quantity-help"
+              >
+              <button class="quantity-control" id="increase" type="button" aria-label="Increase quantity">+</button>
+              <div class="subtotal" aria-live="polite">
+                Subtotal
+                <strong id="subtotal">£7.99</strong>
+              </div>
+            </div>
+            <p class="checkout-status" id="quantity-help" aria-live="polite">
+              Secure Shopify checkout is not connected yet.
+            </p>
+            <a
+              class="action"
+              id="order-action"
+              href="#"
+              aria-disabled="true"
+              aria-describedby="quantity-help"
+            >Shopify checkout coming soon</a>
+            <p class="wholesale-note" id="wholesale-note">
+              Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.
+            </p>
+          </section>
+
+          <ul class="shop-meta" aria-label="Product highlights">
+            <li>200 g kit</li>
+            <li>Makes chicken for 6</li>
+            <li>Three-step kit</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <p class="eyebrow eyebrow-light">Good chicken behaviour</p>
+          <h2 id="how-title">Your dinner. Three simple steps.</h2>
+          <div class="steps">
+            <article class="step">
+              <span>STEP 01</span>
+              <h3>Marinade</h3>
+              <p>Coat the chicken in the marinade blend.</p>
+            </article>
+            <article class="step">
+              <span>STEP 02</span>
+              <h3>Dry dredge</h3>
+              <p>Coat the chicken in the dry dredge mix.</p>
+            </article>
+            <article class="step">
+              <span>STEP 03</span>
+              <h3>Wet dredge &amp; fry</h3>
+              <p>Dip in the wet dredge, repeat the dry coat, then cook following the final pack instructions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="details wrap" aria-labelledby="details-title">
+        <div>
+          <p class="eyebrow">The kit</p>
+          <h2 id="details-title">Everything starts with the crunch.</h2>
+          <p>Made for home cooks who want a fun, hands-on fried chicken night. The three blends take you through the marinade, dry coat and wet dredge.</p>
+        </div>
+        <dl class="facts">
+          <div class="fact">
+            <dt>What's inside</dt>
+            <dd>Marinade mix, dry dredge mix and wet mix.</dd>
+          </div>
+          <div class="fact">
+            <dt>Net weight</dt>
+            <dd>200 g per kit.</dd>
+          </div>
+          <div class="fact">
+            <dt>Serves</dt>
+            <dd>Makes enough chicken for 6 people.</dd>
+          </div>
+          <div class="fact">
+            <dt>Retail price</dt>
+            <dd>£7.99 per kit.</dd>
+          </div>
+          <div class="fact">
+            <dt>Ingredients &amp; allergens</dt>
+            <dd>Final approved ingredient and allergen details will be provided with the finished product before orders open.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="how" id="wholesale" aria-labelledby="wholesale-title">
+        <div class="wrap">
+          <p class="eyebrow eyebrow-light">For retailers &amp; food businesses</p>
+          <h2 id="wholesale-title">Need 1,000 kits or more?</h2>
+          <p class="wholesale-copy">
+            Wholesale orders of 1,000 units or more are handled directly. Contact the Butter Boys team to discuss quantities, pricing and fulfilment.
+          </p>
+          <a class="action wholesale-action" id="wholesale-contact" href="mailto:info@butterboyschicken.com?subject=Butter%20Boys%20wholesale%20enquiry&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20a%20wholesale%20order.%0A%0AApproximate%20quantity%3A%20%0ADelivery%20postcode%2Fcountry%3A%20%0ABusiness%3A%20%0A%0APlease%20send%20me%20wholesale%20pricing%20and%20fulfilment%20details.%0A">
+            Please contact us about wholesale
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner wrap">
+        <p>Butter Boys Chicken&trade; · Three steps. Serious crunch.</p>
+        <a href="mailto:info@butterboyschicken.com">info@butterboyschicken.com</a>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const unitPrice = 799;
+        const wholesaleThreshold = 1000;
+        const maxQuantity = 100000;
+        const quantityInput = document.getElementById("quantity");
+        const subtotal = document.getElementById("subtotal");
+        const status = document.getElementById("quantity-help");
+        const orderAction = document.getElementById("order-action");
+        const wholesaleNote = document.getElementById("wholesale-note");
+        const wholesaleContact = document.getElementById("wholesale-contact");
+        const money = new Intl.NumberFormat("en-GB", {
+          style: "currency",
+          currency: "GBP",
+        });
+
+        const configured = window.BUTTER_BOYS_SHOP_CONFIG || {};
+        const storeDomain = String(configured.storeDomain || "")
+          .trim()
+          .toLowerCase();
+        const variantId = String(configured.productVariantId || "").trim();
+        const validDomain =
+          /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}$/.test(
+            storeDomain,
+          );
+        const validVariantId = /^\d+$/.test(variantId);
+        const checkoutReady = validDomain && validVariantId;
+
+        function setQuantity(value) {
+          const parsed = Number.parseInt(value, 10);
+          const quantity = Number.isFinite(parsed)
+            ? Math.min(maxQuantity, Math.max(1, parsed))
+            : 1;
+          quantityInput.value = String(quantity);
+
+          const isWholesale = quantity >= wholesaleThreshold;
+          if (isWholesale) {
+            subtotal.textContent = "Wholesale quote";
+            status.textContent =
+              "For orders of 1,000 kits or more, please contact us for wholesale pricing and fulfilment.";
+            orderAction.textContent = "Please contact us";
+            orderAction.href = wholesaleContact.href;
+            orderAction.classList.add("wholesale-action");
+            orderAction.removeAttribute("aria-disabled");
+            wholesaleNote.textContent =
+              "Wholesale enquiries are handled directly by our team.";
+            const subject =
+              `Butter Boys wholesale enquiry — ${quantity} kits`.replace(
+                /\s/g,
+                "%20",
+              );
+            wholesaleContact.href =
+              `mailto:info@butterboyschicken.com?subject=${subject}` +
+              `&body=${encodeURIComponent(
+                `Hello Butter Boys,\n\nI'm interested in an order of ${quantity} kits.\n\nDelivery postcode/country:\nBusiness:\n\nPlease send me wholesale pricing and fulfilment details.\n`,
+              )}`;
+            orderAction.href = wholesaleContact.href;
+            return;
+          }
+
+          subtotal.textContent = money.format((unitPrice * quantity) / 100);
+          orderAction.classList.remove("wholesale-action");
+          wholesaleNote.textContent =
+            "Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.";
+          if (checkoutReady) {
+            status.textContent = "You’ll continue to secure Shopify checkout.";
+            orderAction.textContent = "Continue to Shopify checkout";
+            orderAction.href =
+              `https://${storeDomain}/cart/${variantId}:${quantity}`;
+            orderAction.removeAttribute("aria-disabled");
+          } else {
+            status.textContent =
+              "Secure Shopify checkout is not connected yet.";
+            orderAction.textContent = "Shopify checkout coming soon";
+            orderAction.href = "#";
+            orderAction.setAttribute("aria-disabled", "true");
+          }
+        }
+
+        document.getElementById("decrease").addEventListener("click", () => {
+          setQuantity(Number(quantityInput.value) - 1);
+        });
+
+        document.getElementById("increase").addEventListener("click", () => {
+          setQuantity(Number(quantityInput.value) + 1);
+        });
+
+        quantityInput.addEventListener("input", () => {
+          if (quantityInput.value !== "") {
+            setQuantity(quantityInput.value);
+          }
+        });
+
+        quantityInput.addEventListener("blur", () => {
+          setQuantity(quantityInput.value);
+        });
+
+        orderAction.addEventListener("click", (event) => {
+          if (
+            Number(quantityInput.value) < wholesaleThreshold &&
+            !checkoutReady
+          ) {
+            event.preventDefault();
+            status.textContent =
+              "Retail checkout is not available yet. Please check back soon.";
+          }
+        });
+
+        setQuantity(quantityInput.value);
+      })();
+    </script>
+  </body>
+</html>

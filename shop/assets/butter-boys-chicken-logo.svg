@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024" role="img" aria-labelledby="title description">
+  <title id="title">Butter Boys Chicken</title>
+  <desc id="description">A hand-painted Butter Boys wordmark above a red rooster wearing black sunglasses.</desc>
+  <style>
+    .paper { display: none; }
+    .with-paper .paper { display: block; }
+    .wordmark {
+      fill: #101010;
+      font-family: "Marker Felt", "Brush Script MT", "Segoe Print", cursive;
+      font-size: 150px;
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: -9px;
+      paint-order: stroke;
+      stroke: #101010;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 4px;
+    }
+    .rough { stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect class="paper" width="768" height="1024" fill="#f6f0e6"/>
+
+  <g aria-label="Butter Boys wordmark">
+    <text class="wordmark" x="384" y="157" text-anchor="middle" textLength="454" lengthAdjust="spacingAndGlyphs" transform="rotate(-5 384 157)">Butter</text>
+    <text class="wordmark" x="380" y="286" text-anchor="middle" textLength="390" lengthAdjust="spacingAndGlyphs" transform="rotate(-4 380 286)">Boys</text>
+    <text x="568" y="301" fill="#101010" font-family="Arial, sans-serif" font-size="29" font-weight="900">TM</text>
+  </g>
+
+  <g class="rough" fill="#ed1c24" aria-label="Red rooster">
+    <path d="M155 392 C127 372 117 348 129 327 C151 328 174 346 194 359 C185 333 188 310 204 296 C227 313 241 342 249 363 C263 329 283 297 306 281 C325 300 329 331 321 362 C346 337 378 317 405 312 C414 336 400 365 385 389 C424 376 467 371 513 383 C493 402 467 415 436 429 C483 425 532 439 575 468 C542 478 508 480 477 476 C521 490 557 520 578 561 C544 553 515 538 490 517 C516 552 530 592 527 630 C500 603 482 576 469 548 C478 590 471 638 451 676 C431 644 423 609 424 574 C409 621 380 663 340 691 C345 645 361 607 384 575 C345 608 296 629 245 627 C269 592 307 566 349 547 C303 558 253 550 216 528 C253 506 294 492 336 487 C286 480 232 449 197 416 C231 412 266 416 298 426 C244 411 197 397 155 392 Z"/>
+
+    <path d="M232 421 C285 382 367 372 444 397 C513 419 568 464 590 526 C609 578 590 648 572 714 C559 764 565 823 535 868 C505 911 444 899 403 870 C360 840 328 783 301 722 C278 669 248 617 222 565 C199 520 191 459 232 421 Z"/>
+
+    <path d="M258 486 C289 474 319 475 345 491 C322 507 294 514 267 508 Z" fill="#f52a2c"/>
+    <path d="M489 630 C521 673 533 730 516 779 C499 757 484 721 480 692 Z" fill="#f52a2c"/>
+    <path d="M346 727 C379 749 399 786 402 822 C371 805 348 773 346 727 Z" fill="#f52a2c"/>
+  </g>
+
+  <g fill="#063b39" aria-label="Tail feathers">
+    <path d="M245 498 C206 532 166 584 125 647 C111 670 96 700 83 735 C117 712 143 683 165 651 C201 600 232 551 262 519 Z"/>
+    <path d="M281 510 C244 566 218 627 194 693 C183 724 167 764 147 806 C180 783 205 746 224 710 C251 659 278 592 304 532 Z"/>
+    <path d="M523 699 C561 751 589 805 608 863 C577 843 552 812 535 782 C516 750 503 725 491 702 Z"/>
+    <path d="M242 548 C213 579 186 619 161 664 C188 643 214 611 240 573 Z" fill="#101010"/>
+    <path d="M277 573 C251 625 231 675 210 724 C237 696 260 652 286 597 Z" fill="#101010"/>
+    <path d="M546 734 C572 772 592 811 606 847 C581 824 562 792 546 758 Z" fill="#101010"/>
+  </g>
+
+  <g aria-label="Sunglasses">
+    <path fill="#101010" d="M259 467 C298 446 354 445 403 463 L397 520 C393 554 367 576 333 579 C298 582 274 559 267 529 Z"/>
+    <path fill="#101010" d="M450 460 C500 446 562 455 610 460 L654 456 L642 524 C635 560 608 582 571 584 C535 586 507 565 495 534 L483 500 L464 510 L449 502 L434 508 L412 499 L407 471 Z"/>
+    <path fill="#101010" d="M393 468 C413 458 432 458 450 466 L462 488 C441 480 423 481 405 493 Z"/>
+    <path fill="#f8f4ec" d="M285 479 C308 466 344 464 374 472 C350 475 325 486 308 504 C298 515 292 529 289 540 C283 521 281 497 285 479 Z" opacity=".92"/>
+    <path fill="#f8f4ec" d="M486 475 C516 466 558 469 594 475 C569 479 546 490 530 508 C519 520 511 536 508 548 C496 531 488 502 486 475 Z" opacity=".92"/>
+    <path fill="#101010" d="M268 471 C249 470 232 477 220 492 L229 504 C241 492 255 488 272 490 Z"/>
+  </g>
+
+  <g aria-label="Yellow beak">
+    <path d="M435 548 C456 527 485 518 514 523 C542 527 568 544 589 565 C574 577 565 597 547 612 C525 631 492 633 463 619 C442 609 427 591 419 574 Z" fill="#f4c400" stroke="#101010" stroke-width="13" stroke-linejoin="round"/>
+    <path d="M455 566 C475 555 493 551 515 554" fill="none" stroke="#101010" stroke-width="8" stroke-linecap="round"/>
+    <path d="M480 544 C485 537 493 535 501 539 L495 550 Z" fill="#101010"/>
+    <path d="M453 595 C480 609 515 610 543 595" fill="none" stroke="#d79d00" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g fill="none" stroke="#f6f0e6" stroke-linecap="round" opacity=".9" aria-hidden="true">
+    <path d="M168 382 L218 403" stroke-width="8"/>
+    <path d="M275 350 L296 382" stroke-width="7"/>
+    <path d="M464 396 L506 405" stroke-width="6"/>
+    <path d="M218 455 L253 468" stroke-width="5"/>
+    <path d="M315 662 L342 683" stroke-width="5"/>
+    <path d="M525 822 L546 838" stroke-width="6"/>
+    <path d="M183 666 L203 648" stroke-width="5"/>
+  </g>
+</svg>

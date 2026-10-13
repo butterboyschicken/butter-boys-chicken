@@ -7,7 +7,7 @@ This is the standalone, dependency-free Butter Boys Chicken product shop page. I
 - Butter Boys Chicken Kit
 - 200 g
 - Makes enough chicken for 6 people
-- £7.99 per retail kit
+- £7.99 per retail kit with free delivery
 - Orders of 1,000 kits or more switch to the wholesale contact action
 - Serving suggestion: enjoy with pickles; the pickle partner brand is still to be chosen
 
@@ -15,13 +15,13 @@ This is the standalone, dependency-free Butter Boys Chicken product shop page. I
 
 Checkout is created server-side by the Netlify Function in `../netlify/functions/create-square-checkout.mjs`. Square account credentials are never sent to the browser. The function accepts retail quantities from 1 to 999, confirms the configured Square catalogue variation is priced at £7.99, and creates a Square-hosted checkout asking for the shipping address.
 
-1. Create a Square account and complete Square's business verification.
-2. Add the Butter Boys Chicken Kit in the Square Dashboard at £7.99, set up inventory and shipping/fulfilment, and note the item's variation ID and the relevant location ID.
-3. Decide the delivery charge first. The current integration applies one fixed delivery fee to each order; set `SQUARE_SHIPPING_FEE_PENCE` to that fee in pence (for example, `350` for £3.50, or `0` only if delivery is intentionally free). If delivery charges need to vary by destination, do not enable checkout until that policy has been implemented and tested.
+1. Create a Square account and complete Square's business verification. Square currently requires the account owner to verify their identity and link a bank account before accepting payments. Connect the Tide business account for payouts; do not send identity documents, bank details or payment credentials in chat.
+2. Add the Butter Boys Chicken Kit in the Square Dashboard at £7.99, set up inventory and free-delivery fulfilment, and note the item's variation ID and the relevant location ID.
+3. Free delivery was selected. Set `SQUARE_SHIPPING_FEE_PENCE` to `0` in Netlify. The current integration supports only one fixed delivery fee per order; if that policy changes or delivery fees need to vary by destination, update and test the checkout before enabling payments.
 4. In the Netlify site's environment-variable settings, set `SQUARE_ACCESS_TOKEN`, `SQUARE_LOCATION_ID`, `SQUARE_ITEM_VARIATION_ID`, `SQUARE_ENVIRONMENT`, and `SQUARE_SHIPPING_FEE_PENCE`. Use a sandbox token with `SQUARE_ENVIRONMENT=sandbox` for testing; use a production token and `SQUARE_ENVIRONMENT=production` only when ready to accept real payments.
 5. Keep `SQUARE_ACCESS_TOKEN` only in Netlify's encrypted environment-variable settings. Never put it in this repository, `square-config.js`, browser code, or a public message.
 6. After the production function is configured and tested, change `checkoutEnabled` to `true` in `square-config.js` and deploy the site. Retail checkout remains disabled by default.
-7. Test an order end-to-end, including the selected quantity, shipping address and fee, tax, payment methods, Square order notifications and payout to the Tide account. Confirm Square shows the correct amount and settings before enabling live checkout.
+7. Test an order end-to-end, including the selected quantity, shipping address, free delivery, tax, payment methods, Square order notifications and payout to the Tide account. Confirm Square shows the correct amount and settings before enabling live checkout.
 
 Netlify Functions run from the repository root under `netlify/functions/`; no dependencies or build command are required. Set environment variables for the Functions runtime and redeploy after changing them. The client routes quantities of 1,000 or more to wholesale contact, and the function independently rejects those quantities.
 

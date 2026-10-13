@@ -355,7 +355,7 @@
       }
 
       .step {
-        min-height: 152px;
+        min-height: 100%;
         padding: 1.2rem 1.35rem;
         border: 1px solid rgb(255 255 255 / 28%);
       }
@@ -379,8 +379,47 @@
       }
 
       .step p {
-        margin-bottom: 0;
+        margin-bottom: 0.8rem;
         color: #e4e9dc;
+        font-size: 0.86rem;
+      }
+
+      .step h4 {
+        margin: 1.1rem 0 0.45rem;
+        color: var(--yellow);
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .step ul,
+      .step ol {
+        display: grid;
+        gap: 0.32rem;
+        margin: 0;
+        padding-left: 1.15rem;
+        color: #f1f0e7;
+        font-size: 0.82rem;
+      }
+
+      .step li::marker {
+        color: var(--yellow);
+      }
+
+      .step .consumer-add {
+        margin-top: 0.5rem;
+        color: #f4d971;
+        font-size: 0.79rem;
+        font-weight: 650;
+      }
+
+      .food-safety {
+        margin: 1.25rem 0 0;
+        padding: 1rem 1.1rem;
+        border-left: 3px solid var(--yellow);
+        background: rgb(255 255 255 / 8%);
+        color: #fffdf8;
         font-size: 0.86rem;
       }
 
@@ -493,9 +532,6 @@
           grid-template-columns: 1fr;
         }
 
-        .step {
-          min-height: initial;
-        }
       }
 
       @media (max-width: 460px) {
@@ -623,19 +659,51 @@
             <article class="step">
               <span>STEP 01</span>
               <h3>Marinade</h3>
-              <p>Coat the chicken in the marinade blend.</p>
+              <p>Mix the 18 g marinade blend with 240 ml water. Coat the chicken thighs, cover and refrigerate for 4 hours or overnight.</p>
+              <h4>Marinade blend — 18 g</h4>
+              <ul>
+                <li>Sriracha powder — 1 tbsp / 11 g</li>
+                <li>Salt — 1 tsp / 3.7 g</li>
+                <li>Pepper — 1 tsp / 2.6 g</li>
+              </ul>
+              <p class="consumer-add">You add: 1 cup water / 240 ml</p>
             </article>
             <article class="step">
               <span>STEP 02</span>
               <h3>Dry dredge</h3>
-              <p>Coat the chicken in the dry dredge mix.</p>
+              <p>Combine the 138 g dry mix with 2 cups flour. Add 1 tbsp of the dry mix to the marinated chicken thighs and shake. Toss the chicken in the dry mix to coat.</p>
+              <h4>Dry mix — 138 g</h4>
+              <ul>
+                <li>Potato starch — ½ cup / 83 g</li>
+                <li>MSG — 1 tsp / 3.45 g</li>
+                <li>Salt — 1 tbsp / 14.5 g</li>
+                <li>Baking powder — 1 tsp / 3.25 g</li>
+                <li>Cayenne — 1 tsp / 2.2 g</li>
+                <li>White pepper — 1 tsp / 2.6 g</li>
+                <li>Black pepper — 1 tsp / 2.6 g</li>
+                <li>Onion powder — 1½ tbsp / 11.5 g</li>
+                <li>Garlic powder — 1½ tbsp / 11.5 g</li>
+              </ul>
+              <p class="consumer-add">You add: 2 cups flour / 285 g</p>
             </article>
             <article class="step">
               <span>STEP 03</span>
               <h3>Wet dredge &amp; fry</h3>
-              <p>Dip in the wet dredge, repeat the dry coat, then cook following the final pack instructions.</p>
+              <p>Mix the 45 g wet dredge blend with ¾ cup water. Dip each piece of coated chicken in the wet dredge, then toss again in the dry mix until rough and craggy.</p>
+              <h4>Wet dredge — 45 g</h4>
+              <ul>
+                <li>Buttermilk powder — ¼ cup / 32 g</li>
+                <li>Salt — 1 tsp / 3.7 g</li>
+                <li>Cornflour — 1 tbsp / 8.3 g</li>
+              </ul>
+              <p class="consumer-add">You add: ¾ cup water / 180 ml</p>
+              <h4>Fry</h4>
+              <p>Fry at 160°C for 6–12 minutes, depending on piece size and equipment. Do not rely on time alone: check the thickest piece with a food thermometer and ensure the centre reaches 75°C for 30 seconds before serving.</p>
             </article>
           </div>
+          <p class="food-safety">
+            Keep chicken refrigerated while marinating. Use separate clean utensils and surfaces for raw chicken and ready-to-eat food. Cooking time varies with the size of the thighs and the fryer; always verify the chicken is thoroughly cooked.
+          </p>
         </div>
       </section>
 
@@ -664,7 +732,7 @@
           </div>
           <div class="fact">
             <dt>Ingredients &amp; allergens</dt>
-            <dd>Final approved ingredient and allergen details will be provided with the finished product before orders open.</dd>
+            <dd>The recipe blends are listed above. Check the finished pack for the approved ingredient and allergen declaration before cooking.</dd>
           </div>
         </dl>
       </section>

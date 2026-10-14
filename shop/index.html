@@ -332,6 +332,104 @@
         font-weight: 650;
       }
 
+      .bundles {
+        padding-block: clamp(3.5rem, 7vw, 5rem);
+        background: #eee8d9;
+      }
+
+      .bundles h2 {
+        max-width: 15ch;
+        margin-bottom: 0.8rem;
+        color: var(--green);
+        font-family: var(--display);
+        font-size: clamp(2.7rem, 5.6vw, 4.8rem);
+        letter-spacing: -0.025em;
+        line-height: 0.96;
+        text-transform: uppercase;
+      }
+
+      .bundles-intro {
+        max-width: 44rem;
+        margin-bottom: 1.8rem;
+        color: var(--muted);
+      }
+
+      .bundle-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .bundle-card {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.35rem;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--card);
+      }
+
+      .bundle-card h3 {
+        margin-bottom: 0.55rem;
+        color: var(--green);
+        font-family: var(--display);
+        font-size: 1.65rem;
+        letter-spacing: 0.01em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .bundle-card p {
+        margin-bottom: 0.9rem;
+        color: var(--muted);
+      }
+
+      .bundle-card .bundle-price {
+        margin-top: auto;
+        margin-bottom: 0.8rem;
+        color: var(--green);
+        font-size: 1.55rem;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+      }
+
+      .bundle-card .bundle-price small {
+        display: block;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+
+      .bundle-link {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--green);
+        border-radius: 3px;
+        padding: 0.55rem 0.8rem;
+        color: var(--green);
+        font-size: 0.82rem;
+        font-weight: 750;
+        text-align: center;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+      }
+
+      .bundle-link:hover {
+        background: var(--green);
+        color: #fff;
+      }
+
+      .bundle-disclaimer {
+        margin: 1.25rem 0 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
       .wholesale-note {
         margin: 0.85rem 0 0;
         color: var(--muted);
@@ -540,7 +638,8 @@
         }
 
         .hero,
-        .details {
+        .details,
+        .bundle-grid {
           grid-template-columns: 1fr;
         }
 
@@ -622,6 +721,7 @@
           <img class="logo" src="assets/butter-boys-chicken-logo.JPG" alt="Butter Boys Chicken">
         </a>
         <div class="nav-actions">
+          <a class="nav-link" href="#bundles">Bundles</a>
           <a class="nav-link" href="#wholesale">Wholesale info</a>
         </div>
       </nav>
@@ -687,6 +787,61 @@
             <li>Three-step kit</li>
             <li>Free delivery</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="bundles" id="bundles" aria-labelledby="bundles-title">
+        <div class="wrap">
+          <p class="eyebrow">Make it a chicken night</p>
+          <h2 id="bundles-title">Build your own feast.</h2>
+          <p class="bundles-intro">
+            Pair the Chicken Kit with buns, wraps or the tools for a proper fry-up. These are bundle ideas we’re exploring, not products available to buy yet.
+          </p>
+          <div class="bundle-grid">
+            <article class="bundle-card">
+              <h3>The Burger Boy Bundle</h3>
+              <p>Brioche buns, pickles and burger sauce for a crispy chicken burger night.</p>
+              <p class="bundle-price">£12–15<small>Illustrative price, excluding Chicken Kit</small></p>
+              <a class="bundle-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20the%20Burger%20Boy%20Bundle&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20the%20Burger%20Boy%20Bundle.%20Please%20let%20me%20know%20when%20it%27s%20available.">
+                Ask about this bundle
+              </a>
+            </article>
+            <article class="bundle-card">
+              <h3>The Wrap It Up Bundle</h3>
+              <p>Tortillas, hot sauce and pickled jalapeños for a fiery chicken wrap.</p>
+              <p class="bundle-price">£10–13<small>Illustrative price, excluding Chicken Kit</small></p>
+              <a class="bundle-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20the%20Wrap%20It%20Up%20Bundle&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20the%20Wrap%20It%20Up%20Bundle.%20Please%20let%20me%20know%20when%20it%27s%20available.">
+                Ask about this bundle
+              </a>
+            </article>
+            <article class="bundle-card">
+              <h3>The First Timer Bundle</h3>
+              <p>A probe thermometer, kitchen tongs and a cooling rack to help kit out your kitchen.</p>
+              <p class="bundle-price">£25–30<small>Illustrative price, excluding Chicken Kit</small></p>
+              <a class="bundle-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20the%20First%20Timer%20Bundle&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20the%20First%20Timer%20Bundle.%20Please%20let%20me%20know%20when%20it%27s%20available.">
+                Ask about this bundle
+              </a>
+            </article>
+            <article class="bundle-card">
+              <h3>The Dutch Oven Fry Kit</h3>
+              <p>A cast-iron Dutch oven, clip-on oil thermometer, frying basket and heat-safe tongs.</p>
+              <p class="bundle-price">£85–150<small>Illustrative estimate, excluding Chicken Kit</small></p>
+              <a class="bundle-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20the%20Dutch%20Oven%20Fry%20Kit&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20the%20Dutch%20Oven%20Fry%20Kit.%20Please%20let%20me%20know%20when%20it%27s%20available.">
+                Ask about this bundle
+              </a>
+            </article>
+            <article class="bundle-card">
+              <h3>The Countertop Crunch Kit</h3>
+              <p>A countertop fryer, matching basket and a bottle of cooking oil to get frying at home.</p>
+              <p class="bundle-price">£100–180<small>Illustrative estimate, excluding Chicken Kit</small></p>
+              <a class="bundle-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20the%20Countertop%20Crunch%20Kit&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20the%20Countertop%20Crunch%20Kit.%20Please%20let%20me%20know%20when%20it%27s%20available.">
+                Ask about this bundle
+              </a>
+            </article>
+          </div>
+          <p class="bundle-disclaimer">
+            Bundle contents, brands and prices are not final. Prices are illustrative only and will depend on supplier quotes; these bundles are not available to order or through Square checkout yet. Always follow the cookware or fryer manufacturer's instructions and safety guidance.
+          </p>
         </div>
       </section>
 

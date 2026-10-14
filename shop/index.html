@@ -677,7 +677,7 @@
               aria-describedby="quantity-help"
             >Square checkout coming soon</a>
             <p class="wholesale-note" id="wholesale-note">
-              Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.
+              Ordering 100 kits or more? We’ll arrange wholesale pricing with you directly.
             </p>
           </section>
 
@@ -781,9 +781,9 @@
       <section class="how" id="wholesale" aria-labelledby="wholesale-title">
         <div class="wrap">
           <p class="eyebrow eyebrow-light">For retailers &amp; food businesses</p>
-          <h2 id="wholesale-title">Need 1,000 kits or more?</h2>
+          <h2 id="wholesale-title">Need 100 kits or more?</h2>
           <p class="wholesale-copy">
-            Wholesale orders of 1,000 units or more are handled directly. Contact the Butter Boys team to discuss quantities, pricing and fulfilment.
+            Wholesale orders of 100 units or more are handled directly. Contact the Butter Boys team to discuss quantities, pricing and fulfilment.
           </p>
           <a class="action wholesale-action" id="wholesale-contact" href="mailto:info@butterboyschicken.com?subject=Butter%20Boys%20wholesale%20enquiry&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20a%20wholesale%20order.%0A%0AApproximate%20quantity%3A%20%0ADelivery%20postcode%2Fcountry%3A%20%0ABusiness%3A%20%0A%0APlease%20send%20me%20wholesale%20pricing%20and%20fulfilment%20details.%0A">
             Please contact us about wholesale
@@ -802,7 +802,7 @@
     <script>
       (() => {
         const unitPrice = 799;
-        const wholesaleThreshold = 1000;
+        const wholesaleThreshold = 100;
         const maxQuantity = 100000;
         const quantityInput = document.getElementById("quantity");
         const subtotal = document.getElementById("subtotal");
@@ -830,7 +830,7 @@
           if (isWholesale) {
             subtotal.textContent = "Wholesale quote";
             status.textContent =
-              "For orders of 1,000 kits or more, please contact us for wholesale pricing and fulfilment.";
+              "For orders of 100 kits or more, please contact us for wholesale pricing and fulfilment.";
             orderAction.textContent = "Please contact us";
             orderAction.href = wholesaleContact.href;
             orderAction.classList.add("wholesale-action");
@@ -854,7 +854,7 @@
           subtotal.textContent = money.format((unitPrice * quantity) / 100);
           orderAction.classList.remove("wholesale-action");
           wholesaleNote.textContent =
-            "Ordering 1,000 kits or more? We’ll arrange wholesale pricing with you directly.";
+            "Ordering 100 kits or more? We’ll arrange wholesale pricing with you directly.";
           if (checkoutEnabled) {
             status.textContent =
               "Continue to Square’s secure checkout to enter delivery details and pay.";

@@ -18,7 +18,7 @@ The anonymous survey at `/survey/` is collected by Netlify Forms. Form detection
 
 Retail checkout uses a Netlify Function to create a Square-hosted checkout session for the selected quantity. It remains disabled until `shop/square-config.js` enables it and the Square credentials, location ID and item variation ID are set as Netlify environment variables. Never put private Square credentials in the static site. Configure shipping, tax, inventory, order notifications and legal policies in Square before taking orders.
 
-Orders of 1,000 kits or more are routed to the Butter Boys wholesale email. Confirm final approved product ingredients, allergens, nutrition and handling information before opening sales.
+Orders of 100 kits or more are routed to the Butter Boys wholesale email. Confirm final approved product ingredients, allergens, nutrition and handling information before opening sales.
 
 See `shop/README.md` for Square account setup, required Netlify environment variables and checkout activation steps.
 

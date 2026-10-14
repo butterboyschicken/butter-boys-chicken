@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 
 const RETAIL_PRICE_PENCE = 799;
-const MAX_RETAIL_QUANTITY = 999;
+const MAX_RETAIL_QUANTITY = 99;
 const API_VERSION = "2025-10-16";
 const ALLOWED_ORIGINS = new Set([
   "https://butterboyschicken.com",

@@ -99,6 +99,13 @@
         text-underline-offset: 0.24em;
       }
 
+      .nav-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.6rem 1.25rem;
+      }
+
       .hero {
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
@@ -580,6 +587,14 @@
           align-items: flex-start;
           flex-direction: column;
         }
+
+        .nav-actions {
+          gap: 0.45rem 0.75rem;
+        }
+
+        .nav-link {
+          font-size: 0.74rem;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -606,7 +621,10 @@
         <a href="#top" aria-label="Butter Boys Chicken shop home">
           <img class="logo" src="assets/butter-boys-chicken-logo.JPG" alt="Butter Boys Chicken">
         </a>
-        <a class="nav-link" href="#wholesale">Buying for your business? Wholesale info</a>
+        <div class="nav-actions">
+          <a class="nav-link" href="/survey/">Take our quick survey</a>
+          <a class="nav-link" href="#wholesale">Wholesale info</a>
+        </div>
       </nav>
     </header>
 

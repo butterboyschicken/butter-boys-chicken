@@ -6,8 +6,13 @@ A lightweight, static site for the Butter Boys Chicken three-pouch spice kit. No
 
 - `/` — coming-soon landing page.
 - `/shop/` — retail product details and wholesale enquiry page.
+- `/survey/` — anonymous market-research survey.
 
 The existing homepage remains unchanged; the shop is available directly at `/shop/`.
+
+## Market research survey
+
+The anonymous survey at `/survey/` is collected by Netlify Forms. Form detection is enabled for this site; after deployment, confirm that `butter-boys-market-research` appears in Netlify's Forms dashboard. The survey does not request email addresses.
 
 ## Square checkout
 

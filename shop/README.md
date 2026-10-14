@@ -10,6 +10,11 @@ This is the standalone, dependency-free Butter Boys Chicken product shop page. I
 - £7.99 per retail kit with free delivery
 - Orders of 1,000 kits or more switch to the wholesale contact action
 - Serving suggestion: enjoy with pickles; the pickle partner brand is still to be chosen
+- Customer market-research survey at `/survey/`
+
+## Market research survey
+
+The anonymous customer survey is hosted at `survey/index.html`, with a confirmation page at `survey/thanks/index.html`. It uses Netlify Forms (no external survey vendor or added dependencies) and does not collect email addresses. Form detection has been enabled in the site's Forms settings; after deployment, confirm that the form appears in the Netlify dashboard before sharing the survey. Review responses in the Netlify dashboard and follow applicable privacy and retention policies.
 
 ## Connect Square checkout
 

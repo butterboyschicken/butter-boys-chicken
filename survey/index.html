@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f2e7">
+    <meta
+      name="description"
+      content="Tell Butter Boys Chicken what you look for in a home fried chicken kit. A short, anonymous customer survey."
+    >
+    <meta property="og:title" content="Help shape Butter Boys Chicken">
+    <meta
+      property="og:description"
+      content="Take our short survey and tell us what you want from a home fried chicken kit."
+    >
+    <meta property="og:type" content="website">
+    <title>Help Shape Our Product | Butter Boys Chicken</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f7f2e7;
+        --card: #fffdf8;
+        --ink: #18231f;
+        --green: #153c36;
+        --red: #eb2926;
+        --yellow: #f2b900;
+        --muted: #626d65;
+        --line: #ddd5c5;
+        --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+        --display: Impact, "Arial Narrow", "Arial Black", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .top-note {
+        padding: 0.5rem 1rem;
+        background: var(--green);
+        color: var(--card);
+        font-size: 0.77rem;
+        letter-spacing: 0.08em;
+        text-align: center;
+      }
+
+      .header {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav,
+      .footer-inner {
+        display: flex;
+        width: min(940px, calc(100% - 2rem));
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-inline: auto;
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .logo {
+        display: block;
+        width: 58px;
+        height: 68px;
+        object-fit: contain;
+      }
+
+      .nav-link,
+      .text-link {
+        color: var(--green);
+        font-size: 0.88rem;
+        font-weight: 750;
+        text-underline-offset: 0.22em;
+      }
+
+      main {
+        width: min(760px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding-block: clamp(2.5rem, 7vw, 5rem);
+      }
+
+      .eyebrow {
+        margin: 0 0 0.8rem;
+        color: var(--red);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        font-family: var(--display);
+        font-weight: 900;
+        line-height: 0.98;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 14ch;
+        margin: 0 0 1rem;
+        font-size: clamp(2.8rem, 8vw, 5.2rem);
+        letter-spacing: -0.025em;
+      }
+
+      .intro {
+        max-width: 58ch;
+        margin: 0;
+        color: #4e5b53;
+        font-size: 1.05rem;
+      }
+
+      .survey-meta {
+        margin: 0.85rem 0 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      form {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      fieldset,
+      .question {
+        min-width: 0;
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: clamp(1rem, 4vw, 1.4rem);
+        background: var(--card);
+      }
+
+      legend,
+      .question-title {
+        width: 100%;
+        margin: 0 0 0.85rem;
+        padding: 0;
+        color: var(--green);
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .question-title span,
+      legend span {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 500;
+      }
+
+      .choices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.55rem 1rem;
+      }
+
+      .choice {
+        display: flex;
+        min-height: 2.75rem;
+        align-items: flex-start;
+        gap: 0.65rem;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid #e8e1d4;
+        border-radius: 3px;
+        background: #fffefa;
+        cursor: pointer;
+      }
+
+      .choice input {
+        width: 1.1rem;
+        height: 1.1rem;
+        flex: 0 0 auto;
+        margin: 0.1rem 0 0;
+        accent-color: var(--green);
+      }
+
+      .choice span {
+        font-size: 0.9rem;
+      }
+
+      .scale {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.5rem;
+      }
+
+      .scale .choice {
+        min-height: 4.25rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.25rem;
+        text-align: center;
+      }
+
+      .scale .choice input {
+        margin: 0;
+      }
+
+      .field-hint {
+        margin: -0.35rem 0 0.8rem;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      textarea {
+        display: block;
+        width: 100%;
+        min-height: 6.5rem;
+        resize: vertical;
+        border: 1px solid #bdb5a7;
+        border-radius: 3px;
+        padding: 0.75rem;
+        background: #fffefa;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .privacy {
+        margin: 0.25rem 0 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .honeypot {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .submit {
+        min-height: 3.25rem;
+        border: 1px solid var(--green);
+        border-radius: 3px;
+        padding: 0.75rem 1.25rem;
+        background: var(--green);
+        color: #fffdf8;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .submit:hover {
+        background: #0b2e28;
+      }
+
+      :focus-visible {
+        outline: 3px solid #b77a00;
+        outline-offset: 3px;
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        padding-block: 1.25rem;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .footer-inner p {
+        margin: 0;
+      }
+
+      .footer-inner a {
+        color: var(--green);
+        font-weight: 700;
+      }
+
+      @media (max-width: 560px) {
+        .choices {
+          grid-template-columns: 1fr;
+        }
+
+        .scale {
+          grid-template-columns: 1fr;
+        }
+
+        .scale .choice {
+          min-height: 2.75rem;
+          align-items: center;
+          flex-direction: row;
+          justify-content: flex-start;
+          text-align: left;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-note">THREE STEPS. SERIOUS CRUNCH.</div>
+    <header class="header">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/shop/" aria-label="Butter Boys Chicken shop">
+          <img class="logo" src="../shop/assets/butter-boys-chicken-logo.JPG" alt="Butter Boys Chicken">
+        </a>
+        <a class="nav-link" href="/shop/">Back to the shop</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">Help us get it right</p>
+      <h1>What makes great chicken?</h1>
+      <p class="intro">
+        We’re shaping a home fried-chicken kit and would love your honest input. There are no right answers, and your feedback will help guide our product decisions.
+      </p>
+      <p class="survey-meta">About 3 minutes · Anonymous · No email address required</p>
+
+      <form
+        name="butter-boys-market-research"
+        method="POST"
+        action="/survey/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="butter-boys-market-research">
+        <p class="honeypot">
+          <label>Leave this field empty: <input name="bot-field"></label>
+        </p>
+
+        <fieldset>
+          <legend>1. How often do you cook fried chicken at home? <span>Required</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="cooking-frequency" value="weekly" required><span>At least once a week</span></label>
+            <label class="choice"><input type="radio" name="cooking-frequency" value="monthly"><span>About once or twice a month</span></label>
+            <label class="choice"><input type="radio" name="cooking-frequency" value="few-times-year"><span>A few times a year</span></label>
+            <label class="choice"><input type="radio" name="cooking-frequency" value="rarely-interested"><span>Rarely, but I’m interested in trying</span></label>
+            <label class="choice"><input type="radio" name="cooking-frequency" value="never"><span>I don’t cook it at home</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. What matters most when choosing a fried-chicken kit? <span>Select all that apply</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="crunch"><span>A crunchy coating</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="flavour"><span>Great flavour</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="easy"><span>Easy preparation</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="price"><span>Affordable price</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="ingredients"><span>Clear ingredient information</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="less-mess"><span>Less mess and fewer steps</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="customisable"><span>Ability to adjust the seasoning</span></label>
+            <label class="choice"><input type="checkbox" name="product-priorities[]" value="servings"><span>Enough for family or friends</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Which heat level would you prefer? <span>Required</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="heat-preference" value="no-heat" required><span>No heat</span></label>
+            <label class="choice"><input type="radio" name="heat-preference" value="mild"><span>Mild warmth</span></label>
+            <label class="choice"><input type="radio" name="heat-preference" value="medium"><span>Medium heat</span></label>
+            <label class="choice"><input type="radio" name="heat-preference" value="hot"><span>Hot</span></label>
+            <label class="choice"><input type="radio" name="heat-preference" value="very-hot"><span>Very hot</span></label>
+            <label class="choice"><input type="radio" name="heat-preference" value="adjustable"><span>I’d like to adjust it myself</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. What flavour direction sounds best to you? <span>Select all that apply</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="flavour-preference[]" value="classic-peppery"><span>Classic and peppery</span></label>
+            <label class="choice"><input type="checkbox" name="flavour-preference[]" value="smoky"><span>Smoky</span></label>
+            <label class="choice"><input type="checkbox" name="flavour-preference[]" value="garlicky-herby"><span>Garlicky or herby</span></label>
+            <label class="choice"><input type="checkbox" name="flavour-preference[]" value="chilli"><span>Chilli-forward</span></label>
+            <label class="choice"><input type="checkbox" name="flavour-preference[]" value="sweet-savoury"><span>Sweet and savoury</span></label>
+            <label class="choice"><input type="checkbox" name="flavour-preference[]" value="other"><span>Something else / no preference</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Which product format would suit you best? <span>Required</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="format-preference" value="three-step-kit" required><span>A guided kit with separate marinade and coating blends</span></label>
+            <label class="choice"><input type="radio" name="format-preference" value="single-seasoning"><span>One all-in-one seasoning blend</span></label>
+            <label class="choice"><input type="radio" name="format-preference" value="ready-to-use-coating"><span>A ready-to-use coating mix</span></label>
+            <label class="choice"><input type="radio" name="format-preference" value="no-preference"><span>No preference</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. How many people should one pack ideally serve? <span>Required</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="servings-preference" value="1-2" required><span>1–2 people</span></label>
+            <label class="choice"><input type="radio" name="servings-preference" value="3-4"><span>3–4 people</span></label>
+            <label class="choice"><input type="radio" name="servings-preference" value="5-6"><span>5–6 people</span></label>
+            <label class="choice"><input type="radio" name="servings-preference" value="7-plus"><span>7 or more people</span></label>
+            <label class="choice"><input type="radio" name="servings-preference" value="no-preference"><span>No preference</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>7. How likely would you be to consider a kit priced at £7.99, with free delivery? <span>Required</span></legend>
+          <div class="scale">
+            <label class="choice"><input type="radio" name="purchase-likelihood" value="very-unlikely" required><span>Very unlikely</span></label>
+            <label class="choice"><input type="radio" name="purchase-likelihood" value="unlikely"><span>Unlikely</span></label>
+            <label class="choice"><input type="radio" name="purchase-likelihood" value="unsure"><span>Unsure</span></label>
+            <label class="choice"><input type="radio" name="purchase-likelihood" value="likely"><span>Likely</span></label>
+            <label class="choice"><input type="radio" name="purchase-likelihood" value="very-likely"><span>Very likely</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>8. Where would you prefer to buy a product like this? <span>Select all that apply</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="purchase-channel[]" value="brand-website"><span>Brand’s website</span></label>
+            <label class="choice"><input type="checkbox" name="purchase-channel[]" value="supermarket"><span>Supermarket</span></label>
+            <label class="choice"><input type="checkbox" name="purchase-channel[]" value="local-shop"><span>Local food shop</span></label>
+            <label class="choice"><input type="checkbox" name="purchase-channel[]" value="market-event"><span>Market or food event</span></label>
+            <label class="choice"><input type="checkbox" name="purchase-channel[]" value="social-media"><span>Social media shop</span></label>
+            <label class="choice"><input type="checkbox" name="purchase-channel[]" value="other"><span>Somewhere else / no preference</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>9. What would you serve alongside your fried chicken?</legend>
+          <p class="field-hint">For example: pickles, sauces, chips, slaw or something else.</p>
+          <textarea name="serving-suggestions" maxlength="500"></textarea>
+        </fieldset>
+
+        <div class="question">
+          <label class="question-title" for="other-feedback">10. What else would you like us to know? <span>Optional</span></label>
+          <p class="field-hint">Please don’t include personal or sensitive information.</p>
+          <textarea id="other-feedback" name="other-feedback" maxlength="1000"></textarea>
+        </div>
+
+        <p class="privacy">
+          Your answers are anonymous and will be used by Butter Boys Chicken to inform product development. Responses are collected through Netlify and can be reviewed by the site team. Please don’t enter personal or sensitive information.
+        </p>
+        <button class="submit" type="submit">Send my answers</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>Butter Boys Chicken&trade; · Three steps. Serious crunch.</p>
+        <a href="mailto:info@butterboyschicken.com">info@butterboyschicken.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

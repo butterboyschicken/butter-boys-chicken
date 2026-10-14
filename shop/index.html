@@ -430,6 +430,105 @@
         font-size: 0.8rem;
       }
 
+      .extras {
+        padding-block: clamp(3.5rem, 7vw, 5rem);
+        background: var(--paper);
+      }
+
+      .extras h2 {
+        max-width: 15ch;
+        margin-bottom: 0.8rem;
+        color: var(--green);
+        font-family: var(--display);
+        font-size: clamp(2.7rem, 5.6vw, 4.8rem);
+        letter-spacing: -0.025em;
+        line-height: 0.96;
+        text-transform: uppercase;
+      }
+
+      .extras-intro {
+        max-width: 44rem;
+        margin-bottom: 1.8rem;
+        color: var(--muted);
+      }
+
+      .extras-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .extra-card {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--card);
+      }
+
+      .extra-image {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-bottom: 1px solid var(--line);
+        background: #e9e3d8;
+      }
+
+      .extra-copy {
+        display: flex;
+        width: 100%;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .extra-card h3 {
+        margin-bottom: 0.4rem;
+        color: var(--green);
+        font-family: var(--display);
+        font-size: 1.25rem;
+        line-height: 1.05;
+        text-transform: uppercase;
+      }
+
+      .extra-card p {
+        margin-bottom: 0.7rem;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .extra-status {
+        margin-top: auto;
+        color: var(--green) !important;
+        font-size: 0.75rem !important;
+        font-weight: 750;
+      }
+
+      .extra-link {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        color: var(--green);
+        font-size: 0.8rem;
+        font-weight: 750;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+      }
+
+      .extra-link:hover {
+        color: var(--red);
+      }
+
+      .extras-disclaimer {
+        margin: 1.25rem 0 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
       .wholesale-note {
         margin: 0.85rem 0 0;
         color: var(--muted);
@@ -643,6 +742,10 @@
           grid-template-columns: 1fr;
         }
 
+        .extras-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .hero {
           gap: 2rem;
         }
@@ -691,6 +794,10 @@
           gap: 0.45rem 0.75rem;
         }
 
+        .extras-grid {
+          grid-template-columns: 1fr;
+        }
+
         .nav-link {
           font-size: 0.74rem;
         }
@@ -722,6 +829,7 @@
         </a>
         <div class="nav-actions">
           <a class="nav-link" href="#bundles">Bundles</a>
+          <a class="nav-link" href="#extras">Extras</a>
           <a class="nav-link" href="#wholesale">Wholesale info</a>
         </div>
       </nav>
@@ -841,6 +949,147 @@
           </div>
           <p class="bundle-disclaimer">
             Bundle contents, brands and prices are not final. Prices are illustrative only and will depend on supplier quotes; these bundles are not available to order or through Square checkout yet. Always follow the cookware or fryer manufacturer's instructions and safety guidance.
+          </p>
+        </div>
+      </section>
+
+      <section class="extras" id="extras" aria-labelledby="extras-title">
+        <div class="wrap">
+          <p class="eyebrow">The little things that make the feast</p>
+          <h2 id="extras-title">Shop the extras.</h2>
+          <p class="extras-intro">
+            From creamy mayo and crunchy pickles to the kit for a confident fry. These individual product ideas are being explored and aren't available to purchase yet.
+          </p>
+          <div class="extras-grid">
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a mayonnaise bottle" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#mayonnaise"></use></svg>
+              <div class="extra-copy">
+                <h3>Kewpie Mayo</h3>
+                <p>Creamy Japanese-style mayo for burgers, wraps and dipping.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Kewpie%20Mayo&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20Kewpie%20Mayo.%20Please%20let%20me%20know%20if%20you%20decide%20to%20stock%20it.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a jar of pickles" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#pickles"></use></svg>
+              <div class="extra-copy">
+                <h3>Pickles</h3>
+                <p>A tangy, crunchy side for fried chicken. Pickle partner to be chosen.</p>
+                <p class="extra-status">Price to be confirmed · Partner TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Pickles&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20pickles%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of brioche burger buns" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#buns"></use></svg>
+              <div class="extra-copy">
+                <h3>Brioche Buns</h3>
+                <p>Soft, lightly sweet buns for a crispy chicken burger.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Brioche%20Buns&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20brioche%20buns%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a bottle of burger sauce" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#sauce"></use></svg>
+              <div class="extra-copy">
+                <h3>Burger Sauce</h3>
+                <p>A creamy, tangy sauce to finish your chicken burger.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Burger%20Sauce&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20burger%20sauce%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of tortillas" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#tortillas"></use></svg>
+              <div class="extra-copy">
+                <h3>Tortillas</h3>
+                <p>Soft wraps ready to load up with crispy chicken and slaw.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Tortillas&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20tortillas%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a bottle of hot sauce" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#hot-sauce"></use></svg>
+              <div class="extra-copy">
+                <h3>Hot Sauce</h3>
+                <p>A fiery finishing touch for wraps, burgers and dipping.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Hot%20Sauce&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20hot%20sauce%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of pickled jalapeños" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#jalapenos"></use></svg>
+              <div class="extra-copy">
+                <h3>Pickled Jalapeños</h3>
+                <p>Slices of heat and tang for a punchy chicken wrap.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Pickled%20Jalapenos&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20pickled%20jalapenos%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a bottle of cooking oil" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#oil"></use></svg>
+              <div class="extra-copy">
+                <h3>Cooking Oil</h3>
+                <p>A high smoke-point oil suitable for deep frying.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Cooking%20Oil&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20cooking%20oil%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a digital probe thermometer" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#thermometer"></use></svg>
+              <div class="extra-copy">
+                <h3>Probe Thermometer</h3>
+                <p>Check the centre of the chicken reaches a safe temperature.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20a%20Probe%20Thermometer&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20a%20probe%20thermometer%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of kitchen tongs" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#tongs"></use></svg>
+              <div class="extra-copy">
+                <h3>Kitchen Tongs</h3>
+                <p>Long-reach tongs for turning and lifting food while cooking.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20Kitchen%20Tongs&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20kitchen%20tongs%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a wire cooling rack" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#cooling-rack"></use></svg>
+              <div class="extra-copy">
+                <h3>Cooling Rack</h3>
+                <p>Let fried chicken rest while helping the coating stay crisp.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20a%20Cooling%20Rack&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20a%20cooling%20rack%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a wire frying basket" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#frying-basket"></use></svg>
+              <div class="extra-copy">
+                <h3>Frying Basket</h3>
+                <p>A wire basket for carefully lowering and lifting food from hot oil.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20a%20Frying%20Basket&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20a%20frying%20basket%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a cast-iron Dutch oven" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#dutch-oven"></use></svg>
+              <div class="extra-copy">
+                <h3>Cast-Iron Dutch Oven</h3>
+                <p>A heavy pot for frying, used with suitable heat control and care.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20a%20Cast-Iron%20Dutch%20Oven&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20a%20cast-iron%20Dutch%20oven%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+            <article class="extra-card">
+              <svg class="extra-image" role="img" aria-label="Illustration of a countertop deep fryer" viewBox="0 0 180 135"><use href="assets/shop-item-illustrations.svg#countertop-fryer"></use></svg>
+              <div class="extra-copy">
+                <h3>Countertop Fryer</h3>
+                <p>A thermostatically controlled fryer for home use.</p>
+                <p class="extra-status">Price to be confirmed · Availability TBC</p>
+                <a class="extra-link" href="mailto:info@butterboyschicken.com?subject=Interest%20in%20a%20Countertop%20Fryer&amp;body=Hello%20Butter%20Boys%2C%0A%0AI%27m%20interested%20in%20buying%20a%20countertop%20fryer%20alongside%20the%20Chicken%20Kit.">Register your interest</a>
+              </div>
+            </article>
+          </div>
+          <p class="extras-disclaimer">
+            These product ideas are not available to order and are not connected to Square checkout. Prices, brands and suppliers are still to be confirmed; Kewpie and other brand names are suggestions only, not an indication of a partnership. Product availability and suitability will depend on supplier confirmation.
           </p>
         </div>
       </section>

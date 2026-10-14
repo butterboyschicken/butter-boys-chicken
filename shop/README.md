@@ -10,6 +10,7 @@ This is the standalone, dependency-free Butter Boys Chicken product shop page. I
 - £7.99 per retail kit with free delivery
 - Orders of 100 kits or more switch to the wholesale contact action
 - Bundle concepts show illustrative prices and email enquiries only; they are not yet purchasable products
+- Individual food and frying-tool concepts have custom illustrations and email interest links; prices, suppliers and availability are not confirmed
 - Serving suggestion: enjoy with pickles; the pickle partner brand is still to be chosen
 - Customer market-research survey at `/survey/`
 
@@ -22,6 +23,8 @@ The anonymous customer survey is hosted at `survey/index.html`, with a confirmat
 Checkout is created server-side by the Netlify Function in `../netlify/functions/create-square-checkout.mjs`. Square account credentials are never sent to the browser. The function accepts retail quantities from 1 to 99, confirms the configured Square catalogue variation is priced at £7.99, and creates a Square-hosted checkout asking for the shipping address.
 
 The shop's bundle cards are concepts only, with illustrative prices and email enquiry links. They are not connected to Square checkout. Confirm suppliers, exact bundle contents, product safety requirements and final prices before offering them for sale.
+
+Individual extras (including condiments, pickles, cooking ingredients and frying tools) are also display concepts with original local SVG illustrations. Their prices, brands, suppliers and availability must be confirmed before any product is offered for sale; brand mentions do not imply a partnership.
 
 1. Create a Square account and complete Square's business verification. Square currently requires the account owner to verify their identity and link a bank account before accepting payments. Connect the Tide business account for payouts; do not send identity documents, bank details or payment credentials in chat.
 2. Add the Butter Boys Chicken Kit in the Square Dashboard at £7.99, set up inventory and free-delivery fulfilment, and note the item's variation ID and the relevant location ID.

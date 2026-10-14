@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="mayonnaise" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="112" rx="39" ry="8" fill="#d9d0bf"/>
+    <path d="M70 39h40l8 14v49a10 10 0 0 1-10 10H72a10 10 0 0 1-10-10V53z" fill="#fffdf8" stroke="#153c36" stroke-width="3"/>
+    <path d="M76 27h28v15H76z" fill="#eb2926" stroke="#153c36" stroke-width="3"/>
+    <path d="M68 64h44v29H68z" fill="#f2b900"/>
+    <path d="M78 76h24" stroke="#153c36" stroke-width="4" stroke-linecap="round"/>
+    <path d="M84 85h12" stroke="#153c36" stroke-width="3" stroke-linecap="round"/>
+    <path d="M78 53c4-5 8-5 12 0s8 5 12 0" fill="none" stroke="#f2b900" stroke-width="3"/>
+  </symbol>
+  <symbol id="pickles" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="43" ry="8" fill="#d9d0bf"/>
+    <path d="M54 42h72l-5 59a9 9 0 0 1-9 8H68a9 9 0 0 1-9-8z" fill="#d8e8bc" stroke="#153c36" stroke-width="3"/>
+    <path d="M51 36h78v12H51z" fill="#eb2926" stroke="#153c36" stroke-width="3"/>
+    <path d="M72 57c-8 14 7 24 2 38m18-39c-8 14 7 24 2 38m17-37c-8 14 7 24 2 38" fill="none" stroke="#577a36" stroke-width="8" stroke-linecap="round"/>
+    <path d="M76 62l5 3m15 3 5-3m13 13 5-3m-42 11 5-3" stroke="#eff6d9" stroke-width="2"/>
+  </symbol>
+  <symbol id="buns" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="52" ry="8" fill="#d9d0bf"/>
+    <path d="M37 81a40 30 0 0 1 80 0v8H37z" fill="#d99a46" stroke="#673b20" stroke-width="3"/>
+    <path d="M44 91h67v9a8 8 0 0 1-8 8H52a8 8 0 0 1-8-8z" fill="#f2c16f" stroke="#673b20" stroke-width="3"/>
+    <path d="M77 44a34 26 0 0 1 67 0v8H77z" fill="#d99a46" stroke="#673b20" stroke-width="3"/>
+    <path d="M84 55h57v8a8 8 0 0 1-8 8H92a8 8 0 0 1-8-8z" fill="#f2c16f" stroke="#673b20" stroke-width="3"/>
+    <g fill="#fff0cc"><ellipse cx="64" cy="66" rx="2" ry="4" transform="rotate(-28 64 66)"/><ellipse cx="85" cy="57" rx="2" ry="4"/><ellipse cx="103" cy="67" rx="2" ry="4" transform="rotate(28 103 67)"/><ellipse cx="106" cy="40" rx="2" ry="4"/><ellipse cx="126" cy="42" rx="2" ry="4"/></g>
+  </symbol>
+  <symbol id="sauce" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="37" ry="8" fill="#d9d0bf"/>
+    <path d="M76 37h28v14l12 12v39a9 9 0 0 1-9 9H73a9 9 0 0 1-9-9V63l12-12z" fill="#f0c25b" stroke="#153c36" stroke-width="3"/>
+    <path d="M77 27h26v13H77z" fill="#153c36"/>
+    <path d="M68 69h48v26H68z" fill="#eb2926"/>
+    <path d="M78 81h28" stroke="#fffdf8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M84 89h16" stroke="#fffdf8" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="tortillas" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="110" rx="53" ry="8" fill="#d9d0bf"/>
+    <path d="M38 78c12-31 44-42 70-20l26 23-29 31-52-9c-17-3-22-12-15-25z" fill="#f1d39a" stroke="#845b32" stroke-width="3"/>
+    <path d="M68 61c17-8 36 2 51 16l-15 17-34-7c-10-2-11-17-2-26z" fill="#fff2d1" stroke="#b68b50" stroke-width="2"/>
+    <path d="M66 72l16-12m-9 30 21-19m-4 29 21-19" stroke="#d2ad70" stroke-width="2"/>
+    <path d="M48 77c4-8 9-12 16-14" fill="none" stroke="#eb2926" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="hot-sauce" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="34" ry="8" fill="#d9d0bf"/>
+    <path d="M78 39h24v14l12 11v39a9 9 0 0 1-9 9H75a9 9 0 0 1-9-9V64l12-11z" fill="#c43b26" stroke="#153c36" stroke-width="3"/>
+    <path d="M81 28h18v14H81z" fill="#f2b900" stroke="#153c36" stroke-width="2"/>
+    <path d="M69 71h42v23H69z" fill="#fff4d5"/>
+    <path d="M78 80h24m-18 7h12" stroke="#153c36" stroke-width="3" stroke-linecap="round"/>
+    <path d="M90 52c-8 10-6 16 0 17 6-1 8-7 0-17z" fill="#f2b900"/>
+  </symbol>
+  <symbol id="jalapenos" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="43" ry="8" fill="#d9d0bf"/>
+    <path d="M54 43h72l-5 58a9 9 0 0 1-9 8H68a9 9 0 0 1-9-8z" fill="#d8e8bc" stroke="#153c36" stroke-width="3"/>
+    <path d="M51 36h78v12H51z" fill="#f2b900" stroke="#153c36" stroke-width="3"/>
+    <g fill="#5b873b" stroke="#35592b" stroke-width="2"><path d="M69 67c2-10 17-12 19-2 1 7-9 16-13 14-4-1-8-7-6-12z"/><path d="M95 61c4-8 17-6 17 3 0 7-11 13-15 10-4-2-5-8-2-13z"/><path d="M84 85c3-9 17-9 18 0 0 7-10 13-14 10-4-2-6-6-4-10z"/></g>
+    <g fill="none" stroke="#d8e8bc" stroke-width="2"><path d="M73 68l9 5m16-7 9 4m-10 17 8 4"/></g>
+  </symbol>
+  <symbol id="oil" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="37" ry="8" fill="#d9d0bf"/>
+    <path d="M73 42h35l10 15v45a9 9 0 0 1-9 9H72a9 9 0 0 1-9-9V57z" fill="#d9a92f" stroke="#153c36" stroke-width="3"/>
+    <path d="M79 31h24v14H79z" fill="#153c36"/>
+    <path d="M86 23h11v10H86z" fill="#eb2926"/>
+    <path d="M68 67h49v26H68z" fill="#fff4d5"/>
+    <path d="M81 77h23m-17 8h12" stroke="#153c36" stroke-width="3" stroke-linecap="round"/>
+    <path d="M80 58c5-6 12-6 18 0" fill="none" stroke="#fff1ae" stroke-width="3"/>
+  </symbol>
+  <symbol id="thermometer" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="47" ry="8" fill="#d9d0bf"/>
+    <path d="M116 48l-54 55" stroke="#153c36" stroke-width="5" stroke-linecap="round"/>
+    <path d="M62 103l-11 13" stroke="#777d79" stroke-width="3" stroke-linecap="round"/>
+    <g transform="rotate(-16 99 53)"><rect x="65" y="34" width="69" height="34" rx="7" fill="#fffdf8" stroke="#153c36" stroke-width="3"/><rect x="75" y="42" width="37" height="17" rx="2" fill="#d8e8bc"/><text x="93" y="55" fill="#153c36" font-size="12" font-family="sans-serif" text-anchor="middle">75°</text><circle cx="122" cy="51" r="4" fill="#eb2926"/></g>
+  </symbol>
+  <symbol id="tongs" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="44" ry="8" fill="#d9d0bf"/>
+    <path d="M59 37c-10 20-6 44 18 65l12 11m32-76c10 20 6 44-18 65l-12 11" fill="none" stroke="#626d65" stroke-width="8" stroke-linecap="round"/>
+    <path d="M54 35l10-6 13 14-9 9zm72 0-10-6-13 14 9 9z" fill="#153c36"/>
+    <circle cx="90" cy="105" r="7" fill="#f2b900" stroke="#153c36" stroke-width="3"/>
+  </symbol>
+  <symbol id="cooling-rack" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="53" ry="8" fill="#d9d0bf"/>
+    <path d="M38 50h104v46H38z" fill="#fffdf8" stroke="#153c36" stroke-width="3"/>
+    <path d="M49 51v44m16-44v44m16-44v44m16-44v44m16-44v44m16-44v44M39 63h102M39 78h102M39 88h102" stroke="#8a9690" stroke-width="2"/>
+    <path d="M47 96l-5 12m91-12 5 12" stroke="#153c36" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="frying-basket" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="89" cy="110" rx="45" ry="8" fill="#d9d0bf"/>
+    <path d="M88 48l57-18" stroke="#626d65" stroke-width="6" stroke-linecap="round"/>
+    <path d="M42 58h87l-12 43H54z" fill="#d7ddd8" stroke="#153c36" stroke-width="3"/>
+    <path d="M52 63l7 33m18-36v38m20-38-1 38m20-37-7 34M47 75h76M49 87h70" stroke="#8a9690" stroke-width="2"/>
+    <path d="M52 101l-4 8m67-8 3 8" stroke="#153c36" stroke-width="3"/>
+  </symbol>
+  <symbol id="dutch-oven" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="52" ry="8" fill="#d9d0bf"/>
+    <path d="M43 62h94v39a11 11 0 0 1-11 11H54a11 11 0 0 1-11-11z" fill="#263b35" stroke="#153c36" stroke-width="3"/>
+    <path d="M35 61h110v10H35z" fill="#43564c" stroke="#153c36" stroke-width="3"/>
+    <path d="M54 72v30m18-30v31m18-31v31m18-31v31m18-31v30" stroke="#748277" stroke-width="2"/>
+    <path d="M34 72h-8m120 0h8" stroke="#153c36" stroke-width="7" stroke-linecap="round"/>
+    <path d="M70 56a20 13 0 0 1 40 0" fill="#263b35" stroke="#153c36" stroke-width="3"/>
+    <circle cx="90" cy="48" r="5" fill="#f2b900"/>
+  </symbol>
+  <symbol id="countertop-fryer" viewBox="0 0 180 135">
+    <rect width="180" height="135" rx="4" fill="#eee8d9"/>
+    <ellipse cx="90" cy="111" rx="51" ry="8" fill="#d9d0bf"/>
+    <path d="M39 57h102v46a9 9 0 0 1-9 9H48a9 9 0 0 1-9-9z" fill="#d5d8d4" stroke="#153c36" stroke-width="3"/>
+    <path d="M49 49h82v12H49z" fill="#153c36"/>
+    <path d="M56 70h68v26H56z" fill="#f2b900" stroke="#153c36" stroke-width="3"/>
+    <path d="M67 76v15m14-15v15m14-15v15m14-15v15" stroke="#fff4d5" stroke-width="3"/>
+    <rect x="111" y="38" width="22" height="12" rx="3" fill="#eb2926"/>
+    <circle cx="121" cy="44" r="3" fill="#fffdf8"/>
+    <path d="M52 112v5m76-5v5" stroke="#153c36" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+</svg>

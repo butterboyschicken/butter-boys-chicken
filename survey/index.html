@@ -435,13 +435,25 @@
         </fieldset>
 
         <fieldset>
-          <legend>9. What would you serve alongside your fried chicken?</legend>
+          <legend>9. Would you like the kit to include disposable gloves and a bag for handling and marinating the chicken? <span>Required</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="handling-inclusions" value="both" required><span>Yes, both gloves and a bag</span></label>
+            <label class="choice"><input type="radio" name="handling-inclusions" value="gloves-only"><span>Gloves only</span></label>
+            <label class="choice"><input type="radio" name="handling-inclusions" value="bag-only"><span>A bag only</span></label>
+            <label class="choice"><input type="radio" name="handling-inclusions" value="neither"><span>No, I wouldn’t use either</span></label>
+            <label class="choice"><input type="radio" name="handling-inclusions" value="depends-on-price"><span>It would depend on any effect on the price</span></label>
+            <label class="choice"><input type="radio" name="handling-inclusions" value="unsure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>10. What would you serve alongside your fried chicken?</legend>
           <p class="field-hint">For example: pickles, sauces, chips, slaw or something else.</p>
           <textarea name="serving-suggestions" maxlength="500"></textarea>
         </fieldset>
 
         <div class="question">
-          <label class="question-title" for="other-feedback">10. What else would you like us to know? <span>Optional</span></label>
+          <label class="question-title" for="other-feedback">11. What else would you like us to know? <span>Optional</span></label>
           <p class="field-hint">Please don’t include personal or sensitive information.</p>
           <textarea id="other-feedback" name="other-feedback" maxlength="1000"></textarea>
         </div>
